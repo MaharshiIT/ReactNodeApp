@@ -9,7 +9,7 @@ User = mongoose.model("users");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, '../server/photos')
+      cb(null, `${__dirname}/../photos`)
     },
     filename: (req, file, cb) => {
       const

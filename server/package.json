@@ -16,6 +16,7 @@
   "dependencies": {
     "concurrently": "^4.0.1",
     "cookie-parser": "^1.4.3",
+    "event-stream": "^4.0.1",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.3",

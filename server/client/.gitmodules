@@ -1,0 +1,4 @@
+[submodule "ReactNodePractice"]
+	path = ReactNodePractice
+	url = https://github.com/MaharshiIT/ReactNodePractice.git
+	branch = master

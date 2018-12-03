@@ -1,0 +1,16 @@
+@import 'form.scss';
+
+$width:600px;
+.register-form-wrapper {
+    @include forms($width);
+}
+
+@media screen and (max-width: $width + 20px){
+    @import 'media.scss';
+    .register-form-wrapper {
+        form,div{
+            @extend %responsive
+            }
+        }
+    }
+

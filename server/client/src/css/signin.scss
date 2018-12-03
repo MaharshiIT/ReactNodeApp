@@ -1,0 +1,15 @@
+@import 'form.scss';
+
+$width:400px;
+.sign-in-form-wrapper {
+    @include forms($width);
+}
+
+@media screen and (max-width: $width + 20px){
+    @import 'media.scss';
+    .sign-in-form-wrapper{
+        form,div{
+            @extend %responsive
+            }
+        }
+    }

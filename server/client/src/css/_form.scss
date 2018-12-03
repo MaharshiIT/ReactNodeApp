@@ -1,0 +1,28 @@
+
+@mixin forms($width)
+{
+        form, >div {
+        width:$width;
+        margin:auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+}
+
+.form-group {
+    padding:5px 0px;
+}
+
+.image-preview {
+    width:100px;
+    height:100px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.invalid-feedback {
+    display: block;
+}
+

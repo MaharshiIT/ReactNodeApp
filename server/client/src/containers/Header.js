@@ -58,7 +58,10 @@ class Header extends Component {
             {(this.props.user !== "") ? 
                 (<div className="ml-2">
                     <span className="text-info mr-2">{this.props.user}</span>
-                    <img className="mr-2" style={{width:'30px',height:'30px'}} src={`${this.props.photoUrl}`} alt=""/>
+                    {(this.props.photoUrl !== "")?
+                        <img className="mr-2" style={{width:'30px',height:'30px'}} src={`${this.props.photoUrl}`} alt=""/>:
+                        ""
+                    }
                     <Logout onClick={this.logout.bind(this)}/>              
                 </div>):
             ""}

@@ -8,3 +8,4 @@
 * Redux
 * Node/Express
 * MongoDB/Mongoose
+* Jest & Enzyme

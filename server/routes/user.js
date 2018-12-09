@@ -5,11 +5,12 @@ fs=require("fs"),
 multer  = require('multer'),
 mongoose = require('mongoose'),
 {enCrypt} = require('../helpers'),
-User = mongoose.model("users");
+User = mongoose.model("users"),
+{photosPath} = require('../config/keys');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, `${__dirname}/../photos`)
+      cb(null, photosPath)
     },
     filename: (req, file, cb) => {
       const

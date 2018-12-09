@@ -37,7 +37,7 @@ export function Button(props)
 
 export function HelpText({message,className})
     {
-    return <small class={`form-text text-muted ${className || ""}`}>{message}</small>
+    return <small className={`form-text text-muted ${className || ""}`}>{message}</small>
     }
 
 // end functional components
@@ -96,7 +96,7 @@ export class RadioButtons extends PureComponent
                 radio_labels.map(label=>(
                 <div className={`form-check ${className || ""}`}>
                     <label className="form-check-label">
-                        <input type="radio" value={value || label} class="form-check-input" name={name} {...remaining || ""}/>{label}
+                        <input type="radio" value={value || label} className="form-check-input" name={name} {...remaining || ""}/>{label}
                     </label>
                 </div>
                 ))

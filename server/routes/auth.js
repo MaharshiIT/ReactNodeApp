@@ -6,6 +6,8 @@ const fs = require('fs');
 
 const auth = require('../middlewares/auth');
 
+const {photosPath} = require('../config/keys');
+
 module.exports = app => {
     app.post('/login', auth("local"), (req,res)=>{
         const {user} = req;
@@ -17,7 +19,7 @@ module.exports = app => {
                 {
                 let photo_base_64 = "";
                 // read binary data
-                const image = fs.readFileSync(`${__dirname}/../photos/${user.photo}`);
+                const image = fs.readFileSync(`${photosPath}/${user.photo}`);
                 // convert binary data to base64 encoded string
                 photo_base_64 = new Buffer(image).toString('base64');
                 user.photo = `data:image/${user.photo.split(".").pop().toLowerCase()};base64,${photo_base_64}`;

@@ -1,17 +1,15 @@
-import {SET_USER} from '../constants/actionConstants'
+import { SET_USER } from '../constants/actionConstants'
 
 const initialState = {
-    user: "",
-    photoUrl:""
-  };
+  user: '',
+  photoUrl: ''
+}
 
-export function authReducer(state = initialState, action) 
-    {
-    switch(action.type)
-        {   
-        case SET_USER:
-            return {...state,user:action.user,photoUrl:action.photoUrl} 
-        default:
-            return state;
-        }
-    }
+export function authReducer (state = initialState, action) {
+  switch (action.type) {
+    case SET_USER:
+      return { ...state, user: action.user, photoUrl: action.photoUrl }
+    default:
+      return state
+  }
+}

@@ -1,7 +1,6 @@
 
-import {SET_LOADING_INDICATOR_CLASS} from '../constants/actionConstants';
+import { SET_LOADING_INDICATOR_CLASS } from '../constants/actionConstants'
 
-export const setIndicatorVisibility = loading_class => dispatch =>
-    {
-    dispatch({type:SET_LOADING_INDICATOR_CLASS,loading_class});
-    }
+export const setIndicatorVisibility = loadingClass => dispatch => {
+  dispatch({ type: SET_LOADING_INDICATOR_CLASS, loadingClass })
+}

@@ -1,30 +1,23 @@
-import React,{Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-class LoadingIndicator extends Component
-    {
-    constructor(props)
-        {
-        super(props)
-        }
-    render()
-        {
-        const {loading_class,className} = this.props;
-        return(
-            <div className={`loading_indicator ${loading_class} ${className || ""}`}>
-                <div className="loader progress">
-                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{width:'100%'}}></div>
-                </div>
-            </div>
-            )
-        }
-    }
+class LoadingIndicator extends Component {
+  render () {
+    const { loadingClass, className } = this.props
+    return (
+      <div className={`loading_indicator ${loadingClass} ${className || ''}`}>
+        <div className="loader progress">
+          <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: '100%' }}></div>
+        </div>
+      </div>
+    )
+  }
+}
 
-const mapStateToProps = ({loading_indicator}) => 
-    { 
-    return { 
-        loading_class: loading_indicator.loading_class
-        };
-    };
+const mapStateToProps = ({ loadingIndicator }) => {
+  return {
+    loadingClass: loadingIndicator.loadingClass
+  }
+}
 
-export default connect(mapStateToProps)(LoadingIndicator);
+export default connect(mapStateToProps)(LoadingIndicator)

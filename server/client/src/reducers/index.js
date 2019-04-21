@@ -1,10 +1,10 @@
-import {combineReducers} from 'redux'
-import {authReducer} from './authReducer'
-import {loadingIndicatorReducer} from './loadingIndicatorReducer'
+import { combineReducers } from 'redux'
+import { authReducer } from './authReducer'
+import { loadingIndicatorReducer } from './loadingIndicatorReducer'
 
 const reducer = combineReducers({
-    auth: authReducer,
-    loading_indicator: loadingIndicatorReducer
-});
+  auth: authReducer,
+  loadingIndicator: loadingIndicatorReducer
+})
 
-export default reducer;
+export default reducer
